@@ -121,12 +121,6 @@ footer {
     border-radius: 5px;
 }
 
-.founder-txt{
-    font-size: 18px;
-    margin-bottom: 43px;
-    color: var(--black);
-}
-
 .flex{
     display: flex;
     gap: 70px;
@@ -382,6 +376,24 @@ footer {
     color: blue; 
   }
 
+  .founder-txt p::after {
+    content: " | Founder";
+    display: inline-block;
+    margin-left: 5px; 
+    
+}
+
+.founder-txt{
+    font-size: 18px;
+    color: var(--black);
+    display: flex;
+}
+
+.founder-txt p {
+    display: inline; 
+}
+
+
   .popup {
     position: fixed;
     top: 0;
@@ -515,6 +527,13 @@ footer {
         font-size: 10px;
         margin-bottom: 20px;
     }
+
+    .founder-txt p::after {
+        content: " Founder ";
+        display: inline-block;
+        margin-left: 5px; 
+    }
+
   } 
 
   @media (min-width: 2000px) {
@@ -527,11 +546,6 @@ footer {
         font-size: 3em; 
     }
 
+  
+    
 }
-
-/* @media screen and (max-width: 600px) {
-    .popup {
-        right: -100%; 
-        width: 100%; 
-    }
-} */
