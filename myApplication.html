@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Status Checker</title>
+    <link rel="stylesheet" href="myApplication.css">
+</head>
+<body>
+    <div class="hamburger_container">
+        <label for="menu_check">&#9776;</label>
+        <input type="checkbox" id="menu_check">
+        <div class="hide_nav_container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#scholarships">Scholarships</a></li>
+                    <li><a href="schorlarship-form.html">Apply Now</a></li>
+                    <li><a href="contact.html">Contact</a></li> 
+                    <li><a href="signUp.html">Sign Up</a></li>
+                    <li><a href="login.html">Login</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="./images/" alt="Scholarship Logo">
+        </div>
+        <h1>Welcome to Pandovic Scholarship Program</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#scholarships">Scholarships</a></li>
+                <li><a href="schorlarship-form.html">Apply Now</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signUp.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="bk-whitesmoke wdth-80">
+        <div class="text-center m-t">
+            <h1>Application Status Checker</h1>
+        </div>
+
+        <div>
+            <h3>TRACK YOUR APPLICATION</h3>
+            <p>Log in to Applicant Self Service to track your application, upload additional documents or accept you offer. </p>
+        </div>
+
+        <form id="statusForm">
+        <label for="uniqueID">Enter Your Unique ID:</label>
+        <input type="text" id="uniqueID" required>
+        <button type="submit">Check Status</button>
+        </form>
+        <div>
+            <p><span class="red">Note</span>:  If you experience any difficulty, kindly email:support@pandovic.com</p>
+        </div>
+
+        <div id="statusDisplay"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Scholarship Program</p>
+    </footer>
+    <script>
+
+
+        document.getElementById('statusForm').addEventListener('submit', function(e) {
+           e.preventDefault();
+    
+            let isOnline = sessionStorage.getItem('isOnline');
+
+             if (isOnline) {
+                let uniqueID = document.getElementById('uniqueID').value;
+                let status = getStatusForID(uniqueID);
+                   displayStatus(status);
+                } else {
+                alert("Sorry, you have to Login to check your status");
+                window.location.href = "login.html";
+            }
+        });
+
+
+        function getStatusForID(uniqueID) {
+           var applicants = JSON.parse(localStorage.getItem('applicants')) || [];
+
+            console.log(applicants)
+
+            if (applicants) {
+                var applicant = applicants.find(applicant => applicant.uniqueID == uniqueID);
+                return applicant ? applicant : null;
+            } else {
+                return null;
+            }
+        }
+
+        function displayStatus(applicant) {
+            var statusDisplay = document.getElementById('statusDisplay');
+
+            if (applicant !== null) {
+                var firstName = applicant.firstName;
+                var lastName = applicant.lastName;
+                var email = applicant.email;
+                var uniqueID = applicant.uniqueID;
+
+                statusDisplay.innerHTML = `
+                    <h2>Applicant Details</h2>
+                    <p>First Name: <span>${firstName}</span></p>
+                    <p>Last Name: <span>${lastName}</span></p>
+                    <p>Email: <span>${email}</span></p>
+                    <p>Unique ID: <span>${uniqueID}</span></p>
+                `;
+            } else {
+                statusDisplay.innerHTML = 'No applicant found with that unique ID.';
+            }
+        }
+    </script>
+</body>
+</html>
+

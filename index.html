@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship Website</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="hamburger_container">
+        <label for="menu_check">&#9776;</label>
+        <input type="checkbox" id="menu_check">
+        <div class="hide_nav_container">
+            <nav>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#scholarships">Scholarships</a></li>
+                    <li><a href="schorlarship-form.html">Apply Now</a></li>
+                    <li><a href="contact.html">Contact</a></li>  
+                    <li><a href="signUp.html">Sign Up</a></li>
+                    <li><a href="login.html">Login</a></li> 
+                    <li><a href="myApplication.html">My Application</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="./images/" alt="Scholarship Logo">
+        </div>
+        <h1>Welcome to Pandovic Scholarship Program</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#scholarships">Scholarships</a></li>
+                <li><a href="schorlarship-form.html">Apply Now</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signUp.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="myApplication.html">My Application</a></li>
+            </ul>
+        </nav>
+    </header>
+  
+
+    <div class="sch">
+        <div class="grid">
+            <div><img src="./images/20220812_212312.jpg" alt="Student Image"> </div>
+            <div class="sch-txt">
+                <h2>Revolutionizing Education Through Pandovic Scholarship.</h2>
+                <p>At Pandovic Scholarship, we envisioned a future where education transcends
+                     boundaries and becomes a powerful catalyst for positive change in the lives of students. This
+                      vision led to the establishment of the Scholarship program.</p>
+                <div class="flex wdth-40">
+                    <div class=" x-img">
+                        <img src="./images/20230608_140755.jpg" alt="Student Image">
+                        <div class=" founder-txt">
+                            <p>Jensen Knickeson | Founder</p>
+                        </div> 
+                    </div>
+                    <div class="sign-text">
+                        <img src="./images/NapoleonSignature2_1050x700.webp" alt="Student Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="scholarships">
+        <div >
+            <div class="text-center">
+            <h3>PROGRAMS WE OFFER</h3>
+            <p>Our institution offers a diverse range of academic programs to cater to the interests and career goals of 
+                our students. Explore our offerings below:
+            </p>
+            </div>
+            <div class="grid wdth-60">
+            <div class="b-line">
+                <img src="./images/20220812_212042.jpg" alt="Student Image">
+                <h3>Academic Scholarship</h3>
+                <p>Our academic scholarships are awarded to students who demonstrate outstanding performance in their studies. 
+                    To be eligible for this scholarship, students must meet the following criteria:</p>
+                    <button type="button" onclick="showFormtwo()">Learn More</button>
+                    <div class="overlay" id="overlay"></div>
+                    <div class="popup-form" id="popup-form-two">
+                                <div class="flexx">
+                                    <h2>Academic Scholarship Requirement</h2>
+                                    <button type="button" onclick="closeFormtwo()">Go Back</button>
+                                </div>
+                                <h3>Eligibility Requirements:</h3>
+                                <p>1. Academic Excellence: Pandovic academic scholarships are awarded to students who have demonstrated exceptional academic performance. This may be reflected in high grades, standardized test scores, or other academic achievements.</p>
+                                <p>2. Field of Study or Major: Some scholarships are specific to certain fields of study or majors. For example, there may be scholarships for STEM (Science, Technology, Engineering, Mathematics) disciplines, humanities, or other specific areas.</p>
+                                <p>3. Enrollment Status: Scholarships are typically available to both local and international students. 
+                                    Some may have restrictions based on class level (e.g., undergraduate, graduate).</p>
+                                <p>4. Community Involvement or Extracurricular Activities: Our scholarships require or prefer applicants who have been involved in community service, leadership roles, or extracurricular activities.</p>
+                                <p>5. Essay or Personal Statement: This is often a written statement where you can explain why you're a deserving candidate for the scholarship. It may cover your academic achievements, goals, and how the scholarship would benefit you.</p>
+                               
+                                    <h3>Application Deadlines:</h3>
+                                <p>1. Application Opening Date: This is the date when the scholarship application period begins. It's important to be aware of this date so you can start the process in a timely manner.
+                                </p>
+                                <p>2. Application Deadline: This is the final date by which all application materials, including forms, transcripts, recommendations, and any other required documents, must be submitted. Late applications are typically not considered.
+                                </p>
+                                <h3>Required Documentation:</h3>
+                                <p>1. Application Form: This is the formal document you'll need to fill out to apply for the scholarship. It will include 
+                                    personal information, academic history, sports achievements, and other relevant details.</p>
+                                <p>2. Transcripts: Official academic transcripts are usually required to demonstrate your academic standing. These can be 
+                                    obtained from your current or previous educational institutions.
+                                </p>
+                                <p>3. Letters of Recommendation: These are often provided by coaches, teachers, or other individuals who can speak to your 
+                                    abilities, dedication, and character  in your  academics.
+                                </p>
+                                <p>4. Athletic Resume or Portfolio: This document showcases your sports achievements, including competitions won, records set, 
+                                    and any notable performances.</p>
+                                <p>5. Proof of Eligibility (e.g., Amateur Status): Depending on the sport, you may need to provide documentation to prove your 
+                                    eligibility under governing body regulations.</p>
+                                <h3>Additional Criteria:</h3>
+                                <p>1. Essay or Personal Statement: This is a written statement where you can explain why you're a deserving candidate for the 
+                                    scholarship. It may cover your achievements, goals, and how the scholarship would benefit you.</p>
+                                <p>2. Specific Field of Study or Research Proposal (if applicable): Certain scholarships may require you to submit a proposal outlining your research interests or project</p>
+                    </div>
+            </div>
+            <div class="b-line"> 
+                <img src="./images/20220821_090016.jpg" alt="Student Image">
+                <h3>Sport Scholarship</h3>
+                <p>Our sport scholarships are awarded to exceptional athletes who have demonstrated outstanding performance in 
+                    their respective sports. To be eligible for this scholarship, students must meet the following criteria:</p>
+                        <button type="button" onclick="showFormone()">Learn More</button>
+                        <div class="overlay" id="overlay"></div>
+                            <div class="popup-form" id="popup-form-one">
+                                <div class="flexx">
+                                    <h2>Pandovic Sport Scholarship Requirement</h2>
+                                    <button type="button" onclick="closeFormone()">Go Back</button>
+                                </div>
+                                <h3>Eligibility Requirements:</h3>
+                                <p>1. Sporting Excellence: Applicants must have demonstrated exceptional performance in their respective sport(s). This could include achievements at regional, national, or even international levels.</p>
+                                <p>2. Academic Standing: Our sports scholarships also require a certain level of academic achievement.
+                                     This may include a minimum GPA or specific standardized test scores.</p>
+                                <p>3. Enrollment Status: Scholarships are typically available to both local and international students. 
+                                    Some may have restrictions based on class level (e.g., undergraduate, graduate).</p>
+                                <p>4. Commitment and Dedication: We seek athletes who are committed to both their sport and their academics.
+                                     We look for 
+                                    individuals who display discipline, teamwork, leadership, and sportsmanship.</p>
+                                <p>5. Compliance with Eligibility Rules: Athletes must adhere to any applicable eligibility rules set by governing 
+                                    bodies for their sport. This may include amateur status, age restrictions, or other regulations.</p>
+                               
+                                    <h3>Application Deadlines:</h3>
+                                <p>1. Application Opening Date: This is the date when the scholarship application period begins. It's important to be aware of this date so you can start the process in a timely manner.
+                                </p>
+                                <p>2. Application Deadline: This is the final date by which all application materials, including forms, transcripts, recommendations, and any other required documents, must be submitted. Late applications are typically not considered.
+                                </p>
+                                <h3>Required Documentation:</h3>
+                                <p>1. Application Form: This is the formal document you'll need to fill out to apply for the scholarship. It will include 
+                                    personal information, academic history, sports achievements, and other relevant details.</p>
+                                <p>2. Transcripts: Official academic transcripts are usually required to demonstrate your academic standing. These can be 
+                                    obtained from your current or previous educational institutions.
+                                </p>
+                                <p>3. Letters of Recommendation: These are often provided by coaches, teachers, or other individuals who can speak to your 
+                                    abilities, dedication, and character both in your sport and academically.
+                                </p>
+                                <p>4. Athletic Resume or Portfolio: This document showcases your sports achievements, including competitions won, records set, 
+                                    and any notable performances.</p>
+                                <p>5. Proof of Eligibility (e.g., Amateur Status): Depending on the sport, you may need to provide documentation to prove your 
+                                    eligibility under governing body regulations.</p>
+                                <h3>Additional Criteria:</h3>
+                                <p>1. Essay or Personal Statement: This is a written statement where you can explain why you're a deserving candidate for the 
+                                    scholarship. It may cover your achievements, goals, and how the scholarship would benefit you.</p>
+                                <p>Specific Sport-Related Requirements: Depending on the sport, there may be additional criteria related to your performance, such as specific statistics, rankings, or video footage.</p>
+                            </div>
+                        </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bk-whites">
+        <div class="grid">
+            <div>
+                <h2>ESSENTIAL RESOURCES</h2>
+                <p>At our institution, we are committed to providing students with
+                     the resources they need to excel in their academic journey. Explore the essential resources available:
+                </p>
+                <div class="b-line2 flex" >
+                    <div class="">
+                        <h2>Faculty of Art</h2>
+                        <p>As a student in the Faculty of Arts, you'll have access to a range of specialized resources to enhance
+                             your academic experience. </p>
+                    </div>
+
+                    <div class="brd-line"><i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+                </div>
+                <div class="b-line2 flex" >
+                    <div class="">
+                        <h2>Faculty of Science</h2>
+                        <p>As a student in the Faculty of Science, you'll have access to a range of specialized
+                             resources to enhance your academic experience..</p>
+                    </div>
+
+                    <div class="brd-line"><i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+                </div>
+                <div class="b-line2 flex" >
+                    <div class="">
+                        <h2>International students</h2>
+                        <p>We understand that international students have unique needs. Here are some 
+                            essential resources to support your academic and personal journey:</p>
+                    </div>
+
+                    <div class="brd-line"><i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+                </div>
+            </div>
+
+            <div><img src="./images/20230919_134937.jpg" alt="Student Image"></div>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="text-center">
+            <h3>OUR PARTNERS</h3>
+            <p>We are proud to collaborate with esteemed organizations, institutions, and individuals who share our vision
+                 of fostering education and empowering students. Together, we work towards creating a brighter future for
+                  aspiring scholars. Our partners play a crucial role in supporting our mission and expanding the horizons 
+                  of educational opportunities.
+            </p>
+        </div>
+
+        <div class=" partner-img">
+            <div><img src="./images/brand2.png.webp" alt="Student Image"></div>
+            <div><img src="./images/brand1.png.webp" alt="Student Image"></div>
+            <div><img src="./images/brand3.png.webp" alt="Student Image"></div>
+            <div><img src="./images/brand4.png.webp" alt="Student Image"></div>
+        </div>
+
+        
+    </div>
+    
+    <section id="apply">
+        <h2>Apply Now</h2>
+        <p>Ready to take the next step? Apply for our scholarships now!</p>
+        <a href="schorlarship-form.html" class="btn">Apply Now</a>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need further information, feel free to reach out to us.</p>
+        <a href="contact.html" class="btn">Contact Us</a>
+    </section>
+
+    <section id="about" class="grid about">
+    <div>
+        <h2>About Us</h2>
+        <p>Welcome to Pandovic Scholarship Program! where dreams take flight and aspirations find a nurturing home.
+            Established with a vision to transform lives through education, our program stands as a testament 
+            to our unwavering commitment to empowering the next generation of leaders. We are dedicated to providing
+             opportunities for students to achieve their academic goals. </p>
+        <p>Trusted by over 7000+ student world wide, our team of experts is committed to helping you navigate the 
+            scholarship application process and find the right funding for your education. We believe that every student 
+            deserves a chance to excel, and we're here to support you on your journey.
+        </p>
+        <h2>Our Mission</h2>
+        <p>At Pandovic Scholarship, we believe that education is the cornerstone of progress and the key to a brighter future.
+            Our mission is to break down barriers to education, providing deserving students with the tools they need to 
+            excel academically and make a positive impact on the world.
+        </p>
+        <h2>Our Commitment</h2>
+        <p>We are dedicated to creating a scholarship program that not only recognizes academic excellence but also celebrates 
+             diversity, determination, and the drive to make a difference. Through our carefully crafted selection process, 
+             we seek out individuals who embody these qualities and are poised to become change-makers in their respective
+                fields.
+        </p>
+        <h2>Empowering Dreams</h2>
+        <p>The Scholarship Program is more than just financial support; it's a community that fosters growth, 
+            mentorship, and the exchange of ideas. Here, scholars have access to a network of like-minded peers and mentors
+             who share a common goal - to leave an indelible mark on the world.
+        </p>
+        <h2>Get Involved</h2>
+        <p>We invite you to be a part of our journey. Whether you're a potential scholar, a mentor, or a supporter of education,
+             there are many ways to get involved. Together, we can shape a future where education knows no bounds and 
+             opportunities are accessible to all.
+        </p>
+        <p>Thank you for being a part of the Pandovic Scholarship Program. Together, we're writing a story of
+             empowerment, achievement, and boundless potential.</p>
+    </div>
+    <img src="./images/service-img-first.jpg" alt="Student Image">
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Scholarship Program</p>
+    </footer>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-button" onclick="closePopup()">&times;</span>
+            <h2>Welcome Applicant!</h2>
+            <p>Cookies on the Chevening website</p>
+            <p>We’ve put some small files called “cookies” on your device to make our website work.</p>
+            <p>We'd also like to use analytics cookies. These send information about how our site is used 
+                to Google Analytics, and we use this information to improve our website for you
+            </p>
+            <p>We won’t use other “optional cookies” unless you enable them.</p>
+            <p>Let us know if you are happy with this, and we’ll use a cookie to save your choice. 
+                You can read more about the cookies that we use here.
+            </p>
+            <a href="">ACCEPT RECOMMENDED SETTINGS</a><hr>
+                <h2>Necessary cookies</h2>
+                <p>Necessary cookies help the website to work. You may disable these by changing your browser 
+                    settings, but this may affect how the website functions.</p>
+        </div>
+       
+    </div>
+    
+
+    <script src="main.js"></script>
+    <script src="popup.js"></script>
+
+    <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+    let loginLink = document.querySelector('header nav ul li:last-child a');
+
+    let isOnline = sessionStorage.getItem("isOnline");
+
+    if (isOnline) {
+        loginLink.textContent = 'Logout';
+        loginLink.addEventListener('click', function(event) {
+            event.preventDefault(); 
+
+            sessionStorage.removeItem("isOnline");
+            loginLink.textContent = 'Login';
+            window.location.href = 'login.html';
+        });
+    }
+});
+
+
+       </script>
+</body>
+</html>

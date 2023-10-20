@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="signup.css" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <div class="hamburger_container">
+      <label for="menu_check">&#9776;</label>
+      <input type="checkbox" id="menu_check">
+      <div class="hide_nav_container">
+          <nav>
+              <ul>
+                  <li><a href="#about">About Us</a></li>
+                  <li><a href="#scholarships">Scholarships</a></li>
+                  <li><a href="schorlarship-form.html">Apply Now</a></li>
+                  <li><a href="signUp.html">Sign Up</a></li>
+                  <li><a href="login.html">Login</a></li>
+                  <li><a href="contact.html">Contact</a></li>   
+                  <li><a href="myApplication.html">My Application</a></li>
+              </ul>
+          </nav>
+      </div>
+  </div>
+    <main>
+        <header>
+            <div class="logo">
+                <img src="./images/" alt="Scholarship Logo">
+            </div>
+            <h1>Welcome to Pandovic Scholarship Program</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="schorlarship-form.html">Apply Now</a></li>
+                    <li><a href="contact.html">Contact</a></li> 
+                    <li><a href="signUp.html">Sign Up</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="myApplication.html">My Application</a></li>
+                </ul>
+            </nav>
+        </header>
+
+      <form class="form">
+        <div class="form-divide">
+          <div>
+            <label for="sName">Student Name</label>
+            <input type="text" class="inputs" id="stuName" />
+          </div>
+          <div>
+            <label for="sEmail">Email Address</label>
+            <input type="email" class="inputs" id="stuEmail" />
+          </div>
+          <div>
+            <label for="sPhone">Phone Number</label>
+            <input type="text" class="inputs" id="stuPhone" />
+          </div>
+          <div>
+            <label for="sState">Country</label>
+            <input type="text" class="inputs" id="stuState" />
+          </div>
+          <div>
+            <label for="sName">School Name</label>
+            <input type="text" class="inputs" id="sName" />
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input type="password" class="inputs" id="stuPwd" />
+          </div>
+        </div>
+
+        <div>
+          <label for="sAddress">Address</label>
+          <textarea class="inputs" id="stuAddress"></textarea>
+        </div>
+        <div>
+          <button id="btn">Submit</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Scholarship Program</p>
+  </footer>
+  </body>
+  <script src="./signUp.js"></script>
+  <script>
+     document.addEventListener('DOMContentLoaded', function() {
+    let loginLink = document.querySelector('header nav ul li:last-child a');
+
+    let isOnline = sessionStorage.getItem("isOnline");
+
+    if (isOnline) {
+        loginLink.textContent = 'Logout';
+        loginLink.addEventListener('click', function(event) {
+            event.preventDefault(); 
+
+            sessionStorage.removeItem("isOnline");
+            loginLink.textContent = 'Login';
+            window.location.href = 'login.html';
+        });
+    }
+});
+  </script>
+</html>

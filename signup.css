@@ -1,0 +1,60 @@
+body {
+  font-family: 'Krona One', sans-serif;
+}
+
+.form {
+    width: 60%;
+    margin: 170px auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+  }
+  .form-divide {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .form div {
+    margin-bottom: 10px;
+  }
+  .form div label {
+    font-size: 13px;
+    margin-bottom: 2px;
+  }
+  .form div input,
+  .form div select,
+  .form div textarea {
+    display: block;
+    width: 100%;
+    padding: 10px 5px;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+  }
+  .form div textarea {
+    height: 120px;
+  }
+  .form div button {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    border: 1px solid #222222;
+    color: white;
+    font-size: 14px;
+    background-color: #222222;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  @media (max-width: 800px) {
+    .form {
+      width: 90%;
+      margin: auto ;
+    }
+
+    .form-divide {
+      display: grid;
+      grid-template-columns:1fr;
+      gap: 20px;
+    }
+  }
+  

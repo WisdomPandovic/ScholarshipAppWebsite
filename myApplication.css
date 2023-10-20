@@ -1,0 +1,272 @@
+body {
+    font-family: 'Krona One', sans-serif;
+}
+
+.hamburger_container input{
+    display: none;
+}
+
+.hamburger_container label{
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    position: fixed;
+    left: 20px;
+    top:20px ;
+    display: none;
+}
+
+.hide_nav_container{
+    display: none;
+    height: 70vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: white;
+}
+
+.hide_nav_container nav{
+    margin-top: 10%;
+}
+
+.hide_nav_container nav ul{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    color: #8a8a8a;
+}
+
+.hide_nav_container ul li{
+    list-style: none;
+    font-size: 15px;
+    margin: 10px 0;
+    cursor: pointer; 
+}
+
+.hide_nav_container ul li a{
+    text-decoration: none;
+    color: #8a8a8a;
+}
+
+.hide_nav_container a:hover {
+    background-color: #ddd;
+}
+
+.hide_nav_container .nav  .nav-link :hover {
+    color: blue; 
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+header .logo {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+header img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.red{
+    color: red;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+ input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.text-center{
+    text-align: left;
+}
+
+.bk-whitesmoke{
+    background-color: whitesmoke;
+}
+
+@media (min-width: 721px) {
+    .wdth-80 {
+        /* max-width: 500px; */
+    margin:  auto;
+        background-color: #fff;
+        padding: 20px; /* Add padding for better spacing */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for separation */
+        font-size: 40px;
+    }
+
+    .wdth-80 div {
+        padding: 0; /* Reset padding for inner divs */
+        line-height: 1.6;
+        font-size: 20px;
+    }
+
+    /* Apply basic styling to form */
+form {
+    /* max-width: 500px; */
+    margin: auto;
+}
+
+/* Style select elements */
+select, input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Style labels */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    resize: vertical; /* Allow vertical resizing of the textarea */
+    min-height: 150px; /* Set a minimum height for the textarea */
+}
+
+/* Style paragraph under Application ID input */
+div:nth-child(3) p {
+    font-size: 24px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Style submit button */
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.m-t{
+    margin-top: 180px;
+}
+
+.wdth-80{
+    width: 90%;
+    margin: auto ;
+    background-color: #fff;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.red{
+    color: red;
+}
+
+.bk-whitesmoke{
+    background-color: whitesmoke;
+}
+
+}
+
+@media (max-width: 720px) {
+    .hamburger_container label{
+        display: block;
+        z-index: 20;
+    }
+
+
+    input:checked ~ .hide_nav_container {
+        display: block;
+        color: black;
+    }
+
+    header{
+        display: none;
+    }
+
+    .wdth-80{
+        width: 90%;
+        margin: auto ;
+        background-color: #fff;
+    }
+
+    .wdth-80 div{
+       padding: 0px 40px;
+       line-height: 1.5;
+    }
+}

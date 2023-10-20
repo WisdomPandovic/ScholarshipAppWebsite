@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body> 
+    <div class=" form-bk">
+        <div class="link"><a href="index.html"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div>
+        <div id="studentDetail"></div>
+        <div class="container">
+            <div class="scholarship_form">
+                <p>Student Scholarship Form</p>
+            </div>
+
+            <div id="err_msg" class="error"></div>
+            <div class="scholarship_form" >
+                <input type="text" placeholder="First Name" class="f_name" id="f_name" value="">
+                <input type="text" placeholder="Last Name" class="l_name" id="l_name" value="">
+                <input type="text" placeholder="Email" class="l_name" id="email" value="">
+                <input type="text" placeholder="Phone Number" name="" id="phone_no" class="l_name">
+       
+            </div>
+
+            <div class="scholarship_form">
+                <div>
+                    <input type="date" id="dob">
+                </div>
+        
+                <label for="">Gender:</label>
+                <select name="" class="gender" id="gender">
+                    <option value="male" id="male">Male</option>
+                    <option value="female" id="female">Female</option>
+                </select>
+            </div>
+
+            <div class="scholarship_formm">
+        
+                <label for="">Country:</label>
+                <select name="" class="country" id="country">
+                    <option value="africa" id="africa">Africa</option>
+                    <option value="asia" id="asia"> Asia</option>
+                    <option value="s_america" id="s_america">South America</option>
+                    <option value="n_america" id="n_america">North America</option>
+                    <option value="other_country" id="other_country">Other Country</option>
+                </select>
+            </div>
+
+            <div class="scholarship_form">
+                <label>School:</label>
+                <input type="text" name="" id="school" class="school">
+            </div>
+        
+            <div>
+                <p class="grade_level">Insert your Subject & grade, Note: Maths & English are
+                    Compulsory
+                </p>
+            </div>
+            <div class="sub_ject" > 
+            <label>Mathematics</label>
+            <input type="text" name="" id="grade1" value="" placeholder="Grade">
+
+            <div><label>English Language</label>
+            <input type="text" name="" id="grade2" value="" placeholder="Grade"></div>
+
+            <div id="grade_div">
+                <div><label>Other Subject:</label> </div>
+                <input type="text" placeholder="subject" class="subject" id="sub3">
+                <input type="text" id="grade3" class="other" placeholder="Grade">
+                <div>
+                    <input type="text" placeholder="subject" class="subject" id="sub4">
+                    <input type="text" id="grade4" class="other" placeholder="Grade"> 
+                </div>
+                <div>
+                    <input type="text" placeholder="subject" class="subject" id="sub5">
+                    <input type="text" id="grade5" class="other" placeholder="Grade"> 
+                </div>
+                <div>
+                    <input type="text" placeholder="subject" class="subject" id="sub6">
+                    <input type="text" id="grade6" class="other" placeholder="Grade"> 
+                </div>
+                <div>
+                    <input type="text" placeholder="subject" class="subject" id="sub7">
+                    <input type="text" id="grade7" class="other" placeholder="Grade"> 
+                </div>
+                <div>
+                    <input type="text" placeholder="subject" class="subject" id="sub8">
+                    <input type="text" id="grade8" class="other" placeholder="Grade"> 
+                </div>
+            </div>
+            </div>
+       
+
+        <div class="result" id="result"></div>
+            <div class="submit">
+                <button type="button" class="btn_submit"  id="btn_submit">Submit</button>
+            </div>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <div id="popup-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+      <script src="main.js"></script>
+      <script src="schorlarship-form.js"></script>
+</body>
+</html>
