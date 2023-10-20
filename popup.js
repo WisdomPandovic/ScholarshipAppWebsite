@@ -7,3 +7,4 @@ function closePopup() {
 }
 
 window.onload = openPopup;
+
