@@ -491,7 +491,7 @@ footer {
     }
 
     .wdth-40{
-        width: 60%;
+        width: 80%;
         margin: auto;
     }
 
@@ -529,7 +529,7 @@ footer {
     }
 
     .founder-txt p::after {
-        content: " Founder ";
+        content: "| Founder ";
         display: inline-block;
         margin-left: 5px; 
     }
