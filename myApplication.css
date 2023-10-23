@@ -138,6 +138,12 @@ button {
     background-color: whitesmoke;
 }
 
+
+footer {
+    margin-top: auto;
+}
+
+
 @media (min-width: 721px) {
     .wdth-80 {
         /* max-width: 500px; */
@@ -268,5 +274,9 @@ footer {
     .wdth-80 div{
        padding: 0px 40px;
        line-height: 1.5;
+    }
+
+    footer {
+        margin-top: auto;
     }
 }
