@@ -76,9 +76,66 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px;
-    /* position: fixed;
-    width: 100%; */
-    /* bottom: 0; */
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    background-color: whitesmoke;
+    color: #1A1A1A;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 100px 20px;
+    /* text-align: center; */
+}
+
+.footer-links a {
+    color: #3B4855;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.footer-links ul {
+    list-style-type: none; 
+    padding: 0; 
+}
+
+.footer-links p {
+    text-align: left;
+    line-height: 1.8;
+    color: #3B4855;
+    font-weight: 300;
+}
+
+.footer-links h4 {
+    text-align: left;
+    font-size: 22px;
+}
+
+.footer-links input {
+   width: 300px;
+   height: 30px;
+   text-align: center;
+}
+
+.footer-links button {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+ }
+
+ .footer-links i {
+    margin-right: 5px;
+    background-color: #555; 
+    padding: 8px;
+    border-radius: 50%; 
+    color: #fff;
 }
 
 .grid{
@@ -108,10 +165,8 @@ footer {
 }
 
 .sch-txt p{
-   
     font-size: 16px;
     line-height: 26px;
- 
 }
 
 .x-img{
@@ -124,12 +179,6 @@ footer {
     width: 50px;
     height: 50px;
     border-radius: 5px;
-}
-
-.founder-txt{
-    font-size: 18px;
-    margin-bottom: 43px;
-    color: var(--black);
 }
 
 .flex{
@@ -169,7 +218,7 @@ footer {
 .b-line{
     border: 1px solid #ccc;
     background-color: #f9f9f9;
-    padding: 60px;
+    padding: 40px;
 }
 
  
@@ -333,13 +382,12 @@ footer {
     display: none;
 }
 
-
 .hamburger_container label{
     font-size: 30px;
     cursor: pointer;
-    color: black;
+    color: red;
     position: fixed;
-    left: 20px;
+    left: 10px;
     top:20px ;
     display: none;
 }
@@ -365,30 +413,98 @@ footer {
     justify-content: center;
     align-items: left;
     color: #8a8a8a;
-   
+    padding-top: 40px;
 }
 
 
 .hide_nav_container ul li{
     list-style: none;
     font-size: 15px;
-    /* text-transform: uppercase; */
     margin: 10px 0;
     cursor: pointer; 
 }
 
 .hide_nav_container ul li a{
     text-decoration: none;
-    color: #8a8a8a;
+    color: black;
+    margin: 30px;
+    letter-spacing: 3px;
 }
 
 .hide_nav_container a:hover {
-    background-color: #ddd;
+    color: red;
   }
 
   .hide_nav_container .nav  .nav-link :hover {
     color: blue; 
   }
+
+  .founder-txt p::after {
+    content: " | Founder";
+    display: inline-block;
+    margin-left: 5px; 
+    
+}
+
+.founder-txt{
+    font-size: 18px;
+    color: var(--black);
+    display: flex;
+}
+
+.founder-txt p {
+    display: inline; 
+}
+
+
+  .popup {
+    position: fixed;
+    top: 0;
+    right: -300px; 
+    width: 300px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1;
+    overflow-y: auto;
+  }
+  
+  .popup-content {
+    padding: 20px;
+  }
+  
+  .close-button {
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .popup-content a{
+    text-decoration: none;
+    border: 1px solid red;
+    border-radius: 5px;
+    font-size: 10px;
+    padding: 10px;
+    color: black;
+  }
+
+  .button-container {
+    margin-top: 10px; 
+}
+
+.accept-button {
+    margin-bottom: 10px; 
+}
+
+.button-divider {
+    margin-top: 30px; 
+}
+
+.welcome-txt{
+    font-size: 10px;
+    text-align: center;
+}
+
 
 @media (max-width: 738px) {
     .grid{
@@ -422,7 +538,6 @@ footer {
         text-align: center;
         font-size: 16px;
         line-height: 26px;
-     
     }
 
     .wdth-60{
@@ -457,7 +572,7 @@ footer {
     }
 
     .wdth-40{
-        width: 60%;
+        width: 90%;
         margin: auto;
     }
 
@@ -487,26 +602,43 @@ footer {
         border: none;
         border-radius: 4px;
         cursor: pointer;
-        }
+     }
 
-        .popup-form h2 {
-            font-size: 10px;
-            margin-bottom: 20px;
-            }
+    .popup-form h2 {
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+
+    .founder-txt p::after {
+        content: "| Founder ";
+        display: inline-block;
+        margin-left: 5px; 
+    }
+
+    .footer-links {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 60px 20px;
+        text-align: left;
+    }
+
+    .footer-links input {
+        width: 430px;
+        height: 30px;
+        text-align: center;
+     }
   } 
 
   @media (min-width: 2000px) {
-    /* Styles for screens wider than 2000 pixels */
-    /* Adjustments go here */
-    /* For example: */
 
     .container {
-        max-width: 1600px; /* Limit container width to 1600 pixels */
+        max-width: 1600px; 
     }
 
     h1 {
-        font-size: 3em; /* Increase font size for headings */
+        font-size: 3em; 
     }
 
-    /* Add any other styles you want for this range */
+  
+    
 }

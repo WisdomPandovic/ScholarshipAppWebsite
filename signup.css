@@ -1,6 +1,19 @@
+body {
+  font-family: 'Krona One', sans-serif;
+  display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.text-center{
+  text-align: center;
+  margin: 200px 0px 0px;
+  font-size: 20px;
+}
+
 .form {
     width: 60%;
-    margin: 170px auto;
+    margin: auto;
     padding: 10px;
     border-radius: 10px;
     background-color: white;
@@ -41,6 +54,10 @@
     border-radius: 5px;
   }
 
+  footer {
+    margin-top: auto;
+}
+
   @media (max-width: 800px) {
     .form {
       width: 90%;
@@ -52,5 +69,14 @@
       grid-template-columns:1fr;
       gap: 20px;
     }
+
+    .text-center{
+      text-align: center;
+      margin: 100px 0px 0px;
+    }
+
+    footer {
+      margin-top: auto;
+  }
   }
   

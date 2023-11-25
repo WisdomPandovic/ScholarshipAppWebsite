@@ -34,59 +34,6 @@ function validateFields() {
     return true;
 }
 
-// function checkAvg() {
-//     let gradesSum = 0;
-
-//     for (let grade of [grade1, grade2, grade3, grade4, grade5, grade6, grade7, grade8]) {
-//         gradesSum += parseInt(grade.value);
-//     }
-
-//     average = gradesSum / 8;
-//     console.log(average)
-
-//     if (average >= 90 && average <= 100) {
-//         average = 150;
-//     } else if (average >= 85 && average <= 89) {
-//         average = 120;
-//     } else if (average >= 65 && average <= 74) {
-//         average = 100;
-//     } else if (average >= 60 && average <= 64) {
-//         average = 80;
-//     } else if (average >= 50 && average <= 59) {
-//         average = 50;
-//     } else if (average >= 40 && average <= 49) {
-//         average = 20;
-//     } else {
-//         average = 0;
-//     }
-// }
-
-// function checkAvg() {
-//     let gradesSum = 0;
-
-//     for (let grade of [grade1, grade2, grade3, grade4, grade5, grade6, grade7, grade8]) {
-//         gradesSum += parseFloat(grade.value);
-//     }
-
-//     average = gradesSum / 8;
-//     console.log(average);
-
-//     if (average >= 90 && average <= 100) {
-//         average = 150;
-//     } else if (average >= 85 && average <= 89) {
-//         average = 120;
-//     } else if (average >= 65 && average <= 74) {
-//         average = 100;
-//     } else if (average >= 60 && average <= 64) {
-//         average = 80;
-//     } else if (average >= 50 && average <= 59) {
-//         average = 50;
-//     } else if (average >= 40 && average <= 49) {
-//         average = 20;
-//     } else {
-//         average = 0;
-//     }
-// }
 function checkAvg() {
     let gradesSum = 0;
 
@@ -179,36 +126,6 @@ function calculatePoints() {
     console.log(point)
 }
 
-// function displayResults() {
-//     let results = document.getElementById("result");
-//     if (point >= 180) {
-//         results.innerHTML = `Your point is ${point}, congratulations you are cleared with great score`;
-//     } else {
-//         results.innerHTML = `Your point is ${point}, and you are not eligible for a scholarship`;
-//     }
-// }
-
-// function displayResults() {
-//     let firstName = document.getElementById("f_name").value;
-//     let lastName = document.getElementById("l_name").value;
-//     let phoneNumber = document.getElementById("phone_no").value;
-
-//     let results = `Student Details:
-//         First Name: ${firstName}
-//         Last Name: ${lastName}
-//         Phone Number: ${phoneNumber}
-//         Points: ${point}
-//         Scholarship Status:`;
-
-//     if (point >= 180) {
-//         results += ` Congratulations! You are cleared with a great score.`;
-//     } else {
-//         results += ` Sorry, you are not eligible for a scholarship.`;
-//     }
-
-//     alert(results);
-// }
-
 function displayResults() {
     let firstName = document.getElementById("f_name").value;
     let lastName = document.getElementById("l_name").value;
@@ -218,6 +135,26 @@ function displayResults() {
     let gender = document.getElementById("gender").value;
     let country = document.getElementById("country").value;
     let school = document.getElementById("school").value;
+
+    let uniqueID = Date.now();
+
+     let applicantDetails = {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phoneNumber: phoneNumber,
+        dateOfBirth: dateOfBirth,
+        gender: gender,
+        country: country,
+        school: school,
+        uniqueID: uniqueID,
+        points: point
+    };
+
+var applicants = JSON.parse(localStorage.getItem('applicants')) || [];
+applicants.push(applicantDetails);
+localStorage.setItem('applicants', JSON.stringify(applicants));
+
 
     let results = ` <div class="results">
     <h2>Applicant Details</h2>
@@ -234,7 +171,7 @@ function displayResults() {
     `;
 
     if (point >= 180) {
-        results += ` Congratulations! You are cleared with a great score. You will receive a message via email ${email} for further details`;
+        results += ` Congratulations! You are cleared with a great score. You will receive a message via email ${email} for further details. Your Unique ID is ${uniqueID}`;
     } else {
         results += ` Sorry, you are not eligible for a scholarship.`;
     }
@@ -255,8 +192,6 @@ window.onclick = function(event) {
   }
 }
 
-
-
 document.getElementById("btn_submit").addEventListener("click", function () {
     if (validateFields()) {
         calculateAgePoint();
@@ -268,8 +203,6 @@ document.getElementById("btn_submit").addEventListener("click", function () {
         document.getElementById("err_msg").innerHTML = "All fields are required";
     }
 });
-
-
 
 function showFormone() {
     document.getElementById('popup-form-one').style.display = 'block';
@@ -290,22 +223,3 @@ function closeFormtwo() {
     document.getElementById('popup-form-two').style.display = 'none';
     document.getElementById('overlay').style.display = 'none';
 }
-
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     let loginLink = document.querySelector('header nav ul li:last-child a');
-
-//     let isOnline = sessionStorage.getItem("isOnline");
-
-//     if (isOnline) {
-//         loginLink.textContent = 'Logout';
-//         loginLink.href = '#';
-//         loginLink.addEventListener('click', function(event) {
-//             event.preventDefault(); // Prevent the default link behavior
-
-//             sessionStorage.removeItem("isOnline");
-//             loginLink.textContent = 'Login';
-//             loginLink.href = 'login.html';
-//         });
-//     }
-// });
