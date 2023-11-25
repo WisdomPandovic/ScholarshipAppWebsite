@@ -78,6 +78,66 @@ footer {
     padding: 10px;
 }
 
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    background-color: whitesmoke;
+    color: #1A1A1A;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 100px 20px;
+    /* text-align: center; */
+}
+
+.footer-links a {
+    color: #3B4855;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.footer-links ul {
+    list-style-type: none; 
+    padding: 0; 
+}
+
+.footer-links p {
+    text-align: left;
+    line-height: 1.8;
+    color: #3B4855;
+    font-weight: 300;
+}
+
+.footer-links h4 {
+    text-align: left;
+    font-size: 22px;
+}
+
+.footer-links input {
+   width: 300px;
+   height: 30px;
+   text-align: center;
+}
+
+.footer-links button {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+ }
+
+ .footer-links i {
+    margin-right: 5px;
+    background-color: #555; 
+    padding: 8px;
+    border-radius: 50%; 
+    color: #fff;
+}
+
 .grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -158,7 +218,7 @@ footer {
 .b-line{
     border: 1px solid #ccc;
     background-color: #f9f9f9;
-    padding: 60px;
+    padding: 40px;
 }
 
  
@@ -325,10 +385,10 @@ footer {
 .hamburger_container label{
     font-size: 30px;
     cursor: pointer;
-    color: black;
+    color: red;
     position: fixed;
-    left: 20px;
-    top:20px ;
+    left: 10px;
+    top:30px ;
     display: none;
 }
 
@@ -353,6 +413,7 @@ footer {
     justify-content: center;
     align-items: left;
     color: #8a8a8a;
+    padding-top: 40px;
 }
 
 
@@ -365,11 +426,13 @@ footer {
 
 .hide_nav_container ul li a{
     text-decoration: none;
-    color: #8a8a8a;
+    color: black;
+    margin: 30px;
+    letter-spacing: 3px;
 }
 
 .hide_nav_container a:hover {
-    background-color: #ddd;
+    color: red;
   }
 
   .hide_nav_container .nav  .nav-link :hover {
@@ -435,6 +498,11 @@ footer {
 
 .button-divider {
     margin-top: 30px; 
+}
+
+.welcome-txt{
+    font-size: 10px;
+    
 }
 
 
@@ -546,8 +614,19 @@ footer {
         display: inline-block;
         margin-left: 5px; 
     }
-    
 
+    .footer-links {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 60px 20px;
+        text-align: left;
+    }
+
+    .footer-links input {
+        width: 430px;
+        height: 30px;
+        text-align: center;
+     }
   } 
 
   @media (min-width: 2000px) {
