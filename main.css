@@ -388,7 +388,7 @@ footer {
     color: red;
     position: fixed;
     left: 10px;
-    top:20px ;
+    top:30px ;
     display: none;
 }
 
@@ -502,7 +502,7 @@ footer {
 
 .welcome-txt{
     font-size: 10px;
-    text-align: center;
+    
 }
 
 
