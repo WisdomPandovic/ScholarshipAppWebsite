@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="signup.css" />
     <link rel="stylesheet" href="main.css" />
-    <title>Sign Up</title>
+    <title>Document</title>
   </head>
   <body>
     <div class="hamburger_container">
@@ -15,14 +15,17 @@
       <div class="hide_nav_container">
           <nav>
               <ul>
-                  <li><a href="index.html">Home</a></li>
+                  <li><a href="#about">About Us</a></li>
+                  <li><a href="#scholarships">Scholarships</a></li>
                   <li><a href="schorlarship-form.html">Apply Now</a></li>
                   <li><a href="signUp.html">Sign Up</a></li>
                   <li><a href="login.html">Login</a></li>
-                  <li><a href="contact.html">Contact</a></li>   
-                  <li><a href="myApplication.html">My Application</a></li>
+                  <li><a href="#contact">Contact</a></li>   
               </ul>
           </nav>
+
+
+         
       </div>
   </div>
     <main>
@@ -35,15 +38,11 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="schorlarship-form.html">Apply Now</a></li>
-                    <li><a href="contact.html">Contact</a></li> 
                     <li><a href="signUp.html">Sign Up</a></li>
                     <li><a href="login.html">Login</a></li>
-                    <li><a href="myApplication.html">My Application</a></li>
                 </ul>
             </nav>
         </header>
-
-        <div class="text-center">Sign Up</div>
 
       <form class="form">
         <div class="form-divide">
@@ -97,11 +96,11 @@
     if (isOnline) {
         loginLink.textContent = 'Logout';
         loginLink.addEventListener('click', function(event) {
-            event.preventDefault(); 
+            event.preventDefault(); // Prevent the default link behavior
 
             sessionStorage.removeItem("isOnline");
             loginLink.textContent = 'Login';
-            window.location.href = 'login.html';
+            window.location.href = 'login.html'; // Set the href to login.html
         });
     }
 });

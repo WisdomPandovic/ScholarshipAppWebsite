@@ -38,6 +38,7 @@ select {
 }
 
 input[type="text"].other {
+  /* width: calc(70% - 10px); */
   width: 100%;
   margin-right: 10px;
 }
@@ -135,6 +136,10 @@ label {
   min-height: 90vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(./images/background.jpg);
   background-size: cover;
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; */
 }
 
 @media (max-width: 800px) {

@@ -13,31 +13,35 @@
         <div id="studentDetail"></div>
         <div class="container">
             <div class="scholarship_form">
-                <p>Student Scholarship Form</p>
+        <p>Student Scholarship Form</p>
             </div>
 
             <div id="err_msg" class="error"></div>
             <div class="scholarship_form" >
-                <input type="text" placeholder="First Name" class="f_name" id="f_name" value="">
-                <input type="text" placeholder="Last Name" class="l_name" id="l_name" value="">
-                <input type="text" placeholder="Email" class="l_name" id="email" value="">
-                <input type="text" placeholder="Phone Number" name="" id="phone_no" class="l_name">
+        <!-- <label for="email">First Name:</label> -->
+        <input type="text" placeholder="First Name" class="f_name" id="f_name" value="">
+        <!-- <label for="pwd">Last Name:</label> -->
+        <input type="text" placeholder="Last Name" class="l_name" id="l_name" value="">
+        <input type="text" placeholder="Email" class="l_name" id="email" value="">
+        <input type="text" placeholder="Phone Number" name="" id="phone_no" class="l_name">
        
             </div>
 
             <div class="scholarship_form">
-                <div>
-                    <input type="date" id="dob">
-                </div>
+            <div>
+                <input type="date" id="dob">
+            </div>
         
-                <label for="">Gender:</label>
-                <select name="" class="gender" id="gender">
-                    <option value="male" id="male">Male</option>
-                    <option value="female" id="female">Female</option>
-                </select>
+            <label for="">Gender:</label>
+            <select name="" class="gender" id="gender">
+            <option value="male" id="male">Male</option>
+            <option value="female" id="female">Female</option>
+            </select>
             </div>
 
             <div class="scholarship_formm">
+                <!-- <label>Phone Number:</label> -->
+                <!-- <input type="" placeholder="Phone Number" name="" id="phone_no" class="l_name"> -->
         
                 <label for="">Country:</label>
                 <select name="" class="country" id="country">
@@ -50,16 +54,15 @@
             </div>
 
             <div class="scholarship_form">
-                <label>School:</label>
+            <label>School:</label>
                 <input type="text" name="" id="school" class="school">
             </div>
         
-            <div>
-                <p class="grade_level">Insert your Subject & grade, Note: Maths & English are
-                    Compulsory
-                </p>
-            </div>
-            <div class="sub_ject" > 
+            <div><p class="grade_level">Insert your Subject & grade, Note: Maths & English are
+            Compulsory</p></div>
+            <div class="sub_ject" >
+            <!-- <p class="grade_level">Insert your Subject & grade, Note: Maths & English are
+                 Compulsory</p> -->
             <label>Mathematics</label>
             <input type="text" name="" id="grade1" value="" placeholder="Grade">
 
@@ -70,6 +73,7 @@
                 <div><label>Other Subject:</label> </div>
                 <input type="text" placeholder="subject" class="subject" id="sub3">
                 <input type="text" id="grade3" class="other" placeholder="Grade">
+                <!-- <div id="err_grade" class="error"></div> -->
                 <div>
                     <input type="text" placeholder="subject" class="subject" id="sub4">
                     <input type="text" id="grade4" class="other" placeholder="Grade"> 
@@ -96,6 +100,7 @@
 
         <div class="result" id="result"></div>
             <div class="submit">
+                <!-- <div><input id="btnvalidate" type="button" value="Validate"/></div> -->
                 <button type="button" class="btn_submit"  id="btn_submit">Submit</button>
             </div>
 
@@ -104,7 +109,9 @@
                   <span class="close">&times;</span>
                   <div id="popup-content"></div>
                 </div>
-            </div>
+              </div>
+              
+        
         </div>
     </div>
       <script src="main.js"></script>
